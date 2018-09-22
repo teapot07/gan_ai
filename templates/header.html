@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<header class="site-header">
+<meta charset='UTF-8'>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="LAPAX - Beautiful App Landing Page">
+<meta name="keywords" content="LAPAX, App, iOS, Android, Aresta">
+<meta name="author" content="Aresta.co">
+<title>LAPAX by Aresta</title>
+<!-- PACE -->
+<link href="static/css/pace.css" rel="stylesheet">
+<!-- Animates -->
+<link href="static/css/animate.css" rel="stylesheet">
+<!-- Bootstrap -->
+<link href="static/css/bootstrap.min.css" rel="stylesheet">
+<!-- Font Awesome 4.4.0 -->
+<link href="static/css/font-awesome.min.css" rel="stylesheet">
+
+<!-- Owl Carousel Assets -->
+<link href="static/css/owl.carousel.css" rel="stylesheet">
+<link href="static/css/owl.theme.css" rel="stylesheet">
+
+<!-- Lapax CSS -->
+<link href="static/css/lapax.css" rel="stylesheet">
+
+<!-- CodyHouse Animated Headlines -->
+<link href="static/css/cd-headline.css" rel="stylesheet">
+
+<!-- Google Font: Lato -->
+<link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
+
+<body id="lapax">
+    <!-- HEADER -->
+    <header class="header" role="banner">
+        <nav class="navbar navbar-default nav-header" id="js-nav-header" role="navigation">
+
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#nav-menu">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="/">
+                        <img src="static/images/logo.svg" alt="">
+                    </a>
+                </div>
+                <div class="collapse navbar-collapse" id="nav-menu">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="#image">image</a></li>
+                        <li><a href="#feature">feature</a></li>
+                        <li><a href="/logout">logout</a></li>
+                        <li><a href="#profile">profile</a></li>
+                        <li><a href="#form">form</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <section class="container hero header-style-1">
+            <div class="hero-content">
+                <div class="logo-block animation" data-animation="bounceInDown">
+                    <h1 class="logo">AI</h1>
+                </div>
+                <h2 class="intro cd-headline clip">
+                    <span>Perfect way to</span>
+                    <span class="cd-words-wrapper">
+                      <b class="is-visible">Image upload</b>
+                      <b>use GAN</b>
+                      <b>Image conversion</b>
+                    </span>
+                </h2>
+                <div class="download-app">
+                    <a href="#" class="btn btn-default btn-lg btn-download">
+                        Download Now - <span>It’s Free</span>
+                    </a>
+                </div>
+            </div>
+            <a href="#image" class="arrow-down" >
+                <i class="fa fa-angle-down"></i>
+            </a>
+        </section>
+      </header>
+      </body>
+    <!-- FEATURES WITH ICONS-->
+      {% block body %}{% endblock %}
+    <section class="feature block-content animation" data-animation="fadeInUp" id="feature">
+        <div class="container">
+            <div class="row feature-item">
+                <div class="col-xs-2 col-lg-2">
+                    <div class="ico-box">
+                        <i class="fa fa-diamond ico-feature"></i>
+                    </div>
+                    <h3 class="feature-title">
+                      Beautiful Design
+                    </h3>
+                    <p class="feature-description">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis repudiandae aut corporis.
+                    </p>
+                </div>
+                <div class="col-xs-2 col-lg-2">
+                    <div class="ico-box">
+                        <i class="fa fa-star-o ico-feature"></i>
+                    </div>
+                    <h3 class="feature-title">
+                      Smart Notifications
+                    </h3>
+                    <p class="feature-description">
+                        Reiciendis repudiandae aut corporis rerum necessitatibus quaerat consectetur autem deleniti id laborum!
+                    </p>
+                </div>
+                <div class="col-xs-2 col-lg-2">
+                    <div class="ico-box">
+                        <i class="fa fa-cogs ico-feature"></i>
+                    </div>
+                    <h3 class="feature-title">
+                      Optimize Code
+                    </h3>
+                    <p class="feature-description">
+                        Consectetur adipisicing elit. Reiciendis repudiandae aut corporis rerum necessitatibus quaerat consectetur
+                    </p>
+                </div>
+                <div class="col-xs-2 col-lg-2">
+                    <div class="ico-box">
+                        <i class="fa fa-bolt ico-feature"></i>
+                    </div>
+                    <h3 class="feature-title">
+                      Fast Execution
+                    </h3>
+                    <p class="feature-description">
+                        Consectetur adipisicing elit. Reiciendis repudiandae aut corporis rerum necessitatibus quaerat consectetur
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- / END FEATURES WITH ICONS-->
+
+  <section class="subscribe block-content" id="form">
+      <div class="container">
+          <div class="row">
+              <div class="col-md-8 col-md-offset-2">
+                  <h2 class="block-title">Subscribe For Newsletter</h2>
+                  <p class="block-description">Enter your Email. Ut enim ad minim </p>
+                  <div class="newsletter-box">
+                      <form class="form-inline">
+                          <div class="form-group">
+                              <input type="text" class="form-control" placeholder="Your Email">
+                          </div>
+                          <div class="form-group">
+                              <button type="submit" class="btn btn-default btn-subscribe">Subscribe Now</button>
+                          </div>
+                      </form>
+                      <div class="footer-social-icons ">
+                          <a href="https://twitter.com/zwei50333456" title="Twitter" target="_blank"><i class="fa fa-twitter"></i></a>
+                      </div>
+                  </div>
+              </div>
+          </div>
+  </section>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="static/js/bootstrap.min.js"></script>
+<script src="static/js/owl.carousel.min.js"></script>
+<script src="static/js/jquery.waypoints.min.js"></script>
+<script src="static/js/jquery.scrollTo.min.js"></script>
+<script src="static/js/jquery.localScroll.min.js"></script>
+<script src="static/js/headroom.min.js"></script>
+<script src="static/js/jQuery.headroom.min.js"></script>
+<script src="static/js/lapax.js"></script>
+<script src="static/js/cd-headline.js"></script>
+<script src="static/js/pace.min.js"></script>
+</html>

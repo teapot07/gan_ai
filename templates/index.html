@@ -1,0 +1,40 @@
+
+{% extends "header.html" %}
+{% block body %}
+<section class="feature　contact block-content animation" id="image" data-animation="fadeInUp">
+  <div class="container">
+  <div class="row">
+  <div class="col-md-8 col-md-offset-2">
+  <h2 class="block-title">画像をアップロードしてね</h2>
+  <p class="block-description">好きな画像を選択し　</p>
+  <div class="newsletter-box">
+    <form class="form-inline" action="/send" enctype="multipart/form-data"method="post">
+        <div class="form-group">
+            <input type="file" class="form-control"id="img_file" name="img_file">
+        </div>
+        <div class="form-group">
+            <button type="submit" class="btn btn-default btn-subscribe">Up load</button>
+        </div>
+    </form>
+  </div>
+  </div>
+  </div>
+  </div>
+  <div class="container">
+    {% if img_url %}
+    <p><img src="{{ img_url }}" class="w-50 p-3"></p>
+      {% endif %}
+      {% if img_url %}
+    <p>"{{ result_str }}"</p>
+      {% endif %}
+</div>
+  </section>
+
+  <script type="text/javascript">
+    $(function(){
+      $('#img_file').change(function() {
+        $('#img_file').val($(this).val());
+      });
+    })
+  </script>
+{% endblock %}
