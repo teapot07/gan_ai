@@ -10,8 +10,8 @@ import keras
 import sys
 import numpy as np
 import tensorflow as tf
-from flask_sqlalchemy import SQLAlchemy
-from sqlalchemy import create_engine
+#from flask_sqlalchemy import SQLAlchemy
+#from sqlalchemy import create_engine
 classes = ["monkey","boar","crow"]
 num_classes = len(classes)
 image_size = 50
@@ -26,11 +26,11 @@ UPLOAD_FOLDER = './uploads'
 ALLOWED_EXTENSIONS = set(['png', 'jpg', 'gif'])
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 app.config['DEBUG'] = True
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///user.db'
+#app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///user.db'
 app.config['SQLALCHEMY_NATIVE_UNICODE'] = 'utf-8'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = True
-db = SQLAlchemy(app)
-
+#db = SQLAlchemy(app)
+"""
 class User(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String(80),unique=True)
@@ -42,12 +42,10 @@ class User(db.Model):
 def allowed_file(filename):
     return '.' in filename and \
         filename.rsplit('.', 1)[1] in ALLOWED_EXTENSIONS
+"""
 @app.route('/')
 def index():
-    user_list = User.query.all()
-    if 'username' in session:
-        return render_template('index.html',user_list=user_list)
-    return redirect(url_for('login'))
+    return render_template('index.html')
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
@@ -75,10 +73,7 @@ def send():
             filename = secure_filename(img_file.filename)
             img_file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
             img_url = '/uploads/' + filename
-
             filepath = os.path.join(app.config["UPLOAD_FOLDER"],filename)
-
-
             image = Image.open(filepath)
             image = image.convert("RGB")
             image = image.resize((image_size,image_size))
